@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/3-column-preview-card-component-using-html-and-css-nvnSg4t3b)
 - Live Site URL: [Github Pages](https://amitkafle.github.io/FEM-3-Column-Preview-Card)
 
 ### My process
