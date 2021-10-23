@@ -1,11 +1,125 @@
+// Variables
 $primary-color-bright-orange: hsl(31, 77%, 52%);
 $primary-color-dark-cyan: hsl(184, 100%, 22%);
 $primary-color-very-dark-cyan: hsl(179, 100%, 13%);
-
 $neutral-color-transparent-white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
-$neutral-color-very-light-gray: hsl(0, 0%, 95%); // (background, headings, buttons)
-
+$neutral-color-very-light-gray: hsl(
+  0,
+  0%,
+  95%
+); // (background, headings, buttons)
 $font-size: 15px;
+$font-primary: 700 2rem "Big Shoulders Display", sans-serif; //font weight 700
+$font-neutral: "Lexend Deca", sans-serif; //font weight 400
 
-$font-primary: "Big Shoulders Display",sans-serif; //font weight 700
-$font-neutral: "Lexend Deca",sans-serif; //font weight 400
+// Mixins
+@mixin card($color, $class) {
+  .card {
+    &--#{$class} {
+        //Media Query
+      @media screen and (min-width: 1024px) {
+        @if ($class == "bright-orange") {
+          border-radius: 7px 0 0 7px;
+        }
+        @if ($class == "very-dark-cyan") {
+          border-radius: 0 7px 7px 0;
+        }
+      }
+      @if ($class == "bright-orange") {
+        border-radius: 7px 7px 0 0;
+      }
+      @if ($class == "very-dark-cyan") {
+        border-radius: 0 0 7px 7px;
+      }
+      background-color: $color;
+      .card__button {
+        color: $color;
+        &:hover{
+            background-color: $color;
+            color:hsla(0, 0%, 100%, 0.75)
+        }
+      }
+    }
+  }
+}
+
+// Reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Main Css
+body {
+  font-family: $font-neutral;
+  background-color: $neutral-color-very-light-gray;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  margin: 5rem 2rem;
+  border-radius: 8px;
+  color: $neutral-color-very-light-gray;
+}
+
+.card {
+  width: 311px;
+  padding: 2.8rem 2.5rem;
+  &__image {
+    padding-bottom: 25px;
+  }
+  &__title {
+    font: $font-primary;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+  &__desc {
+    padding-bottom: 25px;
+    line-height: 1.6;
+    color: $neutral-color-transparent-white;
+    font-size: $font-size;
+  }
+  &__button {
+    border-radius: 500px;
+    border: 3px solid $neutral-color-very-light-gray;
+    background-color: $neutral-color-very-light-gray;
+    padding: 0.6rem 1.2rem;
+    font-family: $font-neutral;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+}
+
+// Mixin Includes
+@include card($primary-color-bright-orange, "bright-orange");
+@include card($primary-color-dark-cyan, "dark-cyan");
+@include card($primary-color-very-dark-cyan, "very-dark-cyan");
+
+
+//Media Queries
+@media screen and (min-width: 1024px) {
+    body{
+        height: 100vh;
+    }
+  .container {
+    display: flex;
+  }
+  .card{
+    width: 290px;
+    &__image {
+        padding-bottom: 30px;
+      }
+    padding: 2.8rem 2.6rem;
+    &__desc {
+        padding-bottom: 75px;
+    }
+    &__button{
+        padding: 0.9rem 1.4rem;
+        font-size: 1rem;
+    }
+  }
+}

@@ -3,29 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="FEM 3-column preview card component" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FEM - 3-column Preview Card Component</title>
+    <title>FEM - 3 Column Preview Card Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <main class="container">
-      <section class="card card--orange">
-        <img alt="logo" class="card__image"/>
-        <h1 class="card__title"></h1>
-        <p class="card__desc"></p>
-        <button class="card__button"></button>
+      <section class="card card--bright-orange">
+        <img
+          src="./images/icon-sedans.svg"
+          alt="Sedans"
+          class="card__image"
+          aria-hidden="true"
+        />
+        <h1 class="card__title">Sedans</h1>
+        <p class="card__desc">
+          Choose a sedan for its affordability and excellent fuel economy. Ideal
+          for cruising in the city or on your next road trip.
+        </p>
+        <button class="card__button">Learn More</button>
       </section>
       <section class="card card--dark-cyan">
-        <img alt="logo" class="card__image"/>
-        <h1 class="card__title"></h1>
-        <p class="card__desc"></p>
-        <button class="card__button"></button>
+        <img
+          src="./images/icon-suvs.svg"
+          alt="Suvs"
+          class="card__image"
+          aria-hidden="true"
+        />
+        <h1 class="card__title">Suvs</h1>
+        <p class="card__desc">
+          Take an SUV for its spacious interior, power and versatility. Perfect
+          for your next family vacation and off-road adventures
+        </p>
+        <button class="card__button">Learn More</button>
       </section>
       <section class="card card--very-dark-cyan">
-        <img alt="logo" class="card__image"/>
-        <h1 class="card__title"></h1>
-        <p class="card__desc"></p>
-        <button class="card__button"></button>
+        <img
+          src="./images/icon-luxury.svg"
+          alt="Luxury"
+          class="card__image"
+          aria-hidden="true"
+        />
+        <h1 class="card__title">Luxury</h1>
+        <p class="card__desc">
+          Cruise in the best car brands without the bloated price. Enjoy the
+          enhanced comfort of a luxury rental and arrive in style.
+        </p>
+        <button class="card__button">Learn More</button>
       </section>
     </main>
   </body>

@@ -1,3 +1,118 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font: 700 "Big Shoulders Display", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #f2f2f2;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  margin: 5rem 2rem;
+  border-radius: 8px;
+  color: #f2f2f2;
+}
+
+.card {
+  width: 311px;
+  padding: 2.8rem 2.5rem;
+}
+.card__image {
+  padding-bottom: 25px;
+}
+.card__title {
+  font: 700 2rem "Big Shoulders Display", sans-serif;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+.card__desc {
+  padding-bottom: 25px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+}
+.card__button {
+  border-radius: 500px;
+  border: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
+  padding: 0.6rem 1.2rem;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.card--bright-orange {
+  border-radius: 7px 7px 0 0;
+  background-color: #e38826;
+}
+@media screen and (min-width: 1024px) {
+  .card--bright-orange {
+    border-radius: 7px 0 0 7px;
+  }
+}
+.card--bright-orange .card__button {
+  color: #e38826;
+}
+.card--bright-orange .card__button:hover {
+  background-color: #e38826;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card--dark-cyan {
+  background-color: #006970;
+}
+.card--dark-cyan .card__button {
+  color: #006970;
+}
+.card--dark-cyan .card__button:hover {
+  background-color: #006970;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card--very-dark-cyan {
+  border-radius: 0 0 7px 7px;
+  background-color: #004241;
+}
+@media screen and (min-width: 1024px) {
+  .card--very-dark-cyan {
+    border-radius: 0 7px 7px 0;
+  }
+}
+.card--very-dark-cyan .card__button {
+  color: #004241;
+}
+.card--very-dark-cyan .card__button:hover {
+  background-color: #004241;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .card {
+    width: 290px;
+    padding: 2.8rem 2.6rem;
+  }
+  .card__image {
+    padding-bottom: 30px;
+  }
+  .card__desc {
+    padding-bottom: 75px;
+  }
+  .card__button {
+    padding: 0.9rem 1.4rem;
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */
